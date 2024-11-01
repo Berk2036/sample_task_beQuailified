@@ -43,15 +43,6 @@ public class Hooks {
 
     }
 
-    //@BeforeStep
-    public void setupStep(){
-        System.out.println("-----> New Step");
-    }
-
-    //@AfterStep
-    public void teardownStep(){
-        System.out.println("-----> Step ending");
-    }
 
 
 }
