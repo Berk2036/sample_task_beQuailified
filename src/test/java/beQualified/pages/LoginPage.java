@@ -11,7 +11,6 @@ public class LoginPage extends BasePage {
     @FindBy(id = "user-name")
     public WebElement usernameField;
 
-
     //for password
     @FindBy(id = "password")
     public WebElement passwordField;
@@ -24,7 +23,6 @@ public class LoginPage extends BasePage {
     @FindBy(className = "error-message-container")
     public WebElement errorMessage;
 
-
     public void login(String username, String password) {
 
         usernameField.sendKeys(username);
@@ -32,23 +30,5 @@ public class LoginPage extends BasePage {
         loginButton.click();
 
     }
-
-    public void login(String password ) {
-
-        passwordField.sendKeys(password);
-        loginButton.click();
-
-    }
-
-    public void loginWithEmptyPassword(String username) {
-
-        usernameField.sendKeys(username);
-        loginButton.click();
-
-    }
-
-
-
-
 
 }
