@@ -6,7 +6,7 @@ Feature: Login Functionality
   @Regression
   @wip123456
   Scenario Outline: Verify successful login with valid credentials
-    When the user loges in with  "<username>" and "<password>"
+    Given the user loges in with  "<username>" and "<password>"
     Then the user should be redirected to the "shop" page
     Examples:
       | username                | password     |
@@ -19,7 +19,7 @@ Feature: Login Functionality
 
 
   Scenario Outline: Successful logout after login
-    Given the user with "<username>" und "<password>" is on the shop page after a successful login
+    Given the user loges in with  "<username>" and "<password>"
     When the user clicks the logout button
     Then the user should be redirected to the "login" page
     Examples:
@@ -33,7 +33,7 @@ Feature: Login Functionality
 
 
   Scenario Outline: Login Navigation Security
-    Given the user with "<username>" und "<password>" is on the shop page after a successful login
+    Given the user loges in with  "<username>" and "<password>"
     And the user clicks the browser's Back button
     And the user clicks the browser's Forward button
     Then the user should be able to access the Shop page
@@ -49,7 +49,7 @@ Feature: Login Functionality
 
 
   Scenario Outline: Failed login test <description>
-    When the user tries with "<username>" and "<password>"
+    Given the user tries with "<username>" and "<password>"
     Then an error message "<error_message>" should be displayed
     And the user should remain on the login page
     Examples:

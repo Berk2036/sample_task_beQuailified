@@ -32,19 +32,6 @@ public class BrowserUtils {
         Driver.getDriver().navigate().forward();
     }
 
-    /*
-    This method will accept int (in seconds)
-    and execute Thread.sleep method for given duration
-    Arg: int second
-     */
-    public static void sleep(int second){
-        second *= 1000;
-        try{
-            Thread.sleep(second);
-        }catch (InterruptedException e){
-
-        }
-    }
 
     /**
      * to get url
@@ -62,43 +49,6 @@ public class BrowserUtils {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
     }
 
-    /**
-     * return a list of string from a list of elements
-     *
-     * @param list of webelements
-     * @return list of string
-     */
-    public static List<String> getElementsText(List<WebElement> list) {
-        List<String> elemTexts = new ArrayList<>();
-        for (WebElement el : list) {
-            elemTexts.add(el.getText());
-        }
-        return elemTexts;
-    }
-
-    /**
-     * Extracts text from list of elements matching the provided locator into new List<String>
-     *
-     * @param locator
-     * @return list of strings
-     */
-    public static List<String> getElementsText(By locator) {
-
-        List<WebElement> elems = Driver.getDriver().findElements(locator);
-        List<String> elemTexts = new ArrayList<>();
-
-        for (WebElement el : elems) {
-            elemTexts.add(el.getText());
-        }
-        return elemTexts;
-    }
-
-    public static String getFirstElementText(List<WebElement> list) {
-        if (list == null || list.isEmpty()) {
-            return null;  // Return null if the list is empty or null
-        }
-        return list.get(0).getText();  // Return string of the first element
-    }
 
     /**
      * Performs a pause
@@ -124,18 +74,7 @@ public class BrowserUtils {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    /**
-     * Verifies whether the element matching the provided locator is displayed on page
-     * @param element
-     */
-    public static void verifyElementDisplayed(WebElement element) {
-        try {
-            Assert.assertTrue("Element not visible: " + element, element.isDisplayed());
-        } catch (NoSuchElementException e) {
-            e.printStackTrace();
-            Assert.fail("Element not found: " + element);
-        }
-    }
+
 
     /**
      * Waits for element matching the locator to be clickable
@@ -170,5 +109,18 @@ public class BrowserUtils {
         }
     }
 
+    /*
+  This method will accept int (in seconds)
+  and execute Thread.sleep method for given duration
+  Arg: int second
+   */
+    public static void sleep(int second){
+        second *= 1000;
+        try{
+            Thread.sleep(second);
+        }catch (InterruptedException e){
+
+        }
+    }
 
 }
