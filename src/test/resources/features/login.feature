@@ -1,10 +1,10 @@
 Feature: Login Functionality
 
+
   Background: the user is on the login page
     Given the user is on the "login" page
 
-  @Regression
-  @wip123456
+
   Scenario Outline: Verify successful login with valid credentials
     Given the user loges in with  "<username>" and "<password>"
     Then the user should be redirected to the "shop" page
@@ -37,7 +37,6 @@ Feature: Login Functionality
     And the user clicks the browser's Back button
     And the user clicks the browser's Forward button
     Then the user should be able to access the Shop page
-
     Examples:
       | username                | password     |
       | standard_user           | secret_sauce |
