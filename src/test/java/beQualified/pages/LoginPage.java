@@ -1,7 +1,6 @@
 package beQualified.pages;
 
 
-import beQualified.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -23,6 +22,11 @@ public class LoginPage extends BasePage {
     @FindBy(className = "error-message-container")
     public WebElement errorMessage;
 
+    /**
+     * use for login
+     * @param username
+     * @param password
+     */
     public void login(String username, String password) {
 
         usernameField.sendKeys(username);

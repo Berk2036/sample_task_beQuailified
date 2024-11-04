@@ -15,6 +15,9 @@ import java.util.Set;
 
 public class BrowserUtils {
 
+    public static void refreshPage()
+    { Driver.getDriver().navigate().refresh();}
+
     /**
      * navigate to back
      */
@@ -44,20 +47,16 @@ public class BrowserUtils {
     }
 
     /**
-     * verify title
-     * @param expectedTitle
+     * to get url
+     * @param url
      */
-    public static void verifyTitle(String expectedTitle){
-        Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
+    public static void getUrl(String url){
+        Driver.getDriver().get(url);
     }
 
-    public static void verifyTitleContains( String expectedInTitle){
-        Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedInTitle));
-    }
 
     /**
      * This method will accept a String as expected value and verify actual URL CONTAINS the value.
-     * @param expectedInURL
      */
     public static void verifyURLContains(String expectedInURL){
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
@@ -160,6 +159,15 @@ public class BrowserUtils {
     public static WebElement waitForToClickElement(WebElement element, int time) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void compareProductLists(List<String> expectedProductsList, List<String> actualProductsList) {
+        Assert.assertEquals("The lists should have the same number of products", expectedProductsList.size(), actualProductsList.size());
+
+        for (int i = 0; i < expectedProductsList.size(); i++) {
+            Assert.assertEquals("Product information does not match at index " + i,
+                    expectedProductsList.get(i), actualProductsList.get(i));
+        }
     }
 
 
