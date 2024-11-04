@@ -4,18 +4,13 @@ import beQualified.pages.*;
 import io.cucumber.java.en.Then;
 import org.assertj.core.api.SoftAssertions;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class CartStepDef {
 
 
     SoftAssertions softAssertions = new SoftAssertions();
-;
+
     CartPage cartPage = new CartPage();
-    CheckoutPage checkoutPage = new CheckoutPage();
-    CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage();
-    CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage();
 
 
 
