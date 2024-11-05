@@ -43,28 +43,26 @@ Feature: Login Functionality
       | error_user              | secret_sauce |
       | visual_user             | secret_sauce |
 
-  Scenario Outline: Failed login test <description>
+  Scenario Outline: Failed login test
     Given the user tries with "<username>" and "<password>"
     Then an error message "<error_message>" should be displayed
     And the user should remain on the login page
     Examples:
-      | description       | username                | password         | error_message                      |
-      | invalid user name | invalid_user_name       | secret_sauce     | INVALID_USERNAME_OR_PASSWORD_ERROR |
-      | empty user name   |                         | secret_sauce     | EMPTY_USERNAME_ERROR               |
-      | invalid password  | standard_user           | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
-      | invalid password  | locked_out_user         | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
-      | invalid password  | problem_user            | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
-      | invalid password  | performance_glitch_user | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
-      | invalid password  | error_user              | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
-      | invalid password  | visual_user             | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
-      | empty password    | standard_user           |                  | EMPTY_PASSWORD_ERROR               |
-      | empty password    | locked_out_user         |                  | EMPTY_PASSWORD_ERROR               |
-      | empty password    | problem_user            |                  | EMPTY_PASSWORD_ERROR               |
-      | empty password    | performance_glitch_user |                  | EMPTY_PASSWORD_ERROR               |
-      | empty password    | error_user              |                  | EMPTY_PASSWORD_ERROR               |
-      | empty password    | visual_user             |                  | EMPTY_PASSWORD_ERROR               |
-
-
+      | username                | password         | error_message                      |
+      | invalid_user_name       | secret_sauce     | INVALID_USERNAME_OR_PASSWORD_ERROR |
+      |                         | secret_sauce     | EMPTY_USERNAME_ERROR               |
+      | standard_user           | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
+      | locked_out_user         | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
+      | problem_user            | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
+      | performance_glitch_user | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
+      | error_user              | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
+      | visual_user             | invalid_password | INVALID_USERNAME_OR_PASSWORD_ERROR |
+      | standard_user           |                  | EMPTY_PASSWORD_ERROR               |
+      | locked_out_user         |                  | EMPTY_PASSWORD_ERROR               |
+      | problem_user            |                  | EMPTY_PASSWORD_ERROR               |
+      | performance_glitch_user |                  | EMPTY_PASSWORD_ERROR               |
+      | error_user              |                  | EMPTY_PASSWORD_ERROR               |
+      | visual_user             |                  | EMPTY_PASSWORD_ERROR               |
 
 
 
