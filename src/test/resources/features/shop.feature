@@ -44,7 +44,6 @@ Feature: Verification and shop process
       | error_user              | secret_sauce |
       | visual_user             | secret_sauce |
 
-
   Scenario Outline: Verify added product appears in the cart
     When the user tries with "<username>" and "<password>"
     When the user has added first product to the cart

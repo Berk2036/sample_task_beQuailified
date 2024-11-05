@@ -5,7 +5,7 @@ Feature: Cart page functionality
 
   Scenario Outline:  User removes items from the cart using the Remove button
     When the user loges in with  "<username>" and "<password>"
-    When the user clicks all Add to Cart
+    When  the user adds a product to the cart
     And the user navigates to the cart page
     Then the user clicks the remove button at cart page
     And the products should no longer visible in the cart

@@ -9,15 +9,13 @@ import beQualified.utilities.enums.ErrorMessages;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 
+import static org.junit.Assert.*;
 
 public class LoginStepDef {
 
     LoginPage loginPage = new LoginPage();
     ShopPage shopPage = new ShopPage();
-
-
 
 
     @When("the user loges in with  {string} and {string}")
@@ -33,10 +31,10 @@ public class LoginStepDef {
 
     @Then("an error message {string} should be displayed")
     public void an_error_message_should_be_displayed(String errorMessage) {
-       String expectedErrorMessage = ErrorMessages.valueOf(errorMessage).getErrorMessage();
+        String expectedErrorMessage = ErrorMessages.valueOf(errorMessage).getErrorMessage();
 
-       String actualMessage = loginPage.errorMessage.getText();
-       Assert.assertEquals(expectedErrorMessage, actualMessage);
+        String actualMessage = loginPage.errorMessage.getText();
+        assertEquals(expectedErrorMessage, actualMessage);
     }
 
     @Then("the user should remain on the login page")
@@ -75,7 +73,6 @@ public class LoginStepDef {
         String url = ConfigurationReader.getProperty(page);
         Driver.getDriver().get(url);
     }
-
 
 
 }

@@ -6,23 +6,18 @@ import beQualified.utilities.ConfigurationReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.SoftAssertions;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class ShopStepDef {
 
     List<String> expectedProductListData = new ArrayList<>();
     List<String> actualProductListData = new ArrayList<>();
-
-    SoftAssertions softAssertions = new SoftAssertions();
-
 
     ShopPage shopPage = new ShopPage();
     CartPage cartPage = new CartPage();
@@ -86,8 +81,7 @@ public class ShopStepDef {
     
     @Then("the button should change to Remove")
     public void the_button_should_change_to_remove() {
-      //  Assert.assertEquals(shopPage.productList.size(), shopPage.listOfAllRemoveBtn.size());
-        softAssertions.assertThat(shopPage.productList.size()).isEqualTo(shopPage.listOfAllRemoveBtn.size());
+        assertEquals(shopPage.productList.size(), shopPage.listOfAllRemoveBtn.size());
     }
 
     @When("the user clicks the remove button")
@@ -99,7 +93,7 @@ public class ShopStepDef {
 
     @Then("the button should change to Add to Cart")
     public void the_button_should_change_to_add_to_cart() {
-        softAssertions.assertThat(shopPage.productList.size()).isEqualTo(shopPage.listOfAllAddToCartBtn.size());
+        assertEquals(shopPage.productList.size(), shopPage.listOfAllAddToCartBtn.size());
     }
 
     @Then("the number in the cart icon should match the number of products in cart")
@@ -109,10 +103,8 @@ public class ShopStepDef {
 
         int addCartBtnValue = shopPage.listOfAllRemoveBtn.size();
 
-        //Assert.assertEquals(cartValue, addCartBtnValue);
-        softAssertions.assertThat(cartValue).isEqualTo(addCartBtnValue);
+        assertEquals(cartValue, addCartBtnValue);
 
-        softAssertions.assertAll();
     }
 
     @When("the user has added first product to the cart")
@@ -124,7 +116,7 @@ public class ShopStepDef {
     @Then("the product information in the cart should match the shop page details")
     public void the_product_information_in_the_cart_should_match_the_shop_page_details() {
         actualProductListData = cartPage.getListProductInfo(cartPage.productList.get(0));
-        Assert.assertEquals(expectedProductListData, actualProductListData);
+        assertEquals(expectedProductListData, actualProductListData);
     }
 
     @When("the user has added all product to the cart")

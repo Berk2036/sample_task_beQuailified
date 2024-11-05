@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "beQualified/steps",
         dryRun = false,
-        tags = "@a",
+        tags = "",
         publish = true //for  report with public link
 )
 public class CukesRunner {}

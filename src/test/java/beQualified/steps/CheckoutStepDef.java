@@ -7,9 +7,10 @@ import beQualified.pages.ShopPage;
 import beQualified.utilities.BrowserUtils;
 import beQualified.utilities.ConfigurationReader;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 
 import java.util.Map;
+
+import static org.junit.Assert.*;
 
 public class CheckoutStepDef {
 
@@ -22,7 +23,7 @@ public class CheckoutStepDef {
         checkoutPage.typeRequiredInfoAtCheckoutPage(requiredInformation);
 
         // if the entered text in the input matches the expected text
-        Assert.assertEquals(requiredInformation, checkoutPage.getActualRequiredInfoAtCheckoutPage(checkoutPage.checkoutInputs));
+        assertEquals(requiredInformation, checkoutPage.getActualRequiredInfoAtCheckoutPage(checkoutPage.checkoutInputs));
     }
 
     @Then("the user should be redirected to the cart page with click cancel button")

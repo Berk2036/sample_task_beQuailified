@@ -4,7 +4,6 @@ Feature: Login Functionality
   Background: the user is on the login page
     Given the user is on the "login" page
 
-
   Scenario Outline: Verify successful login with valid credentials
     Given the user loges in with  "<username>" and "<password>"
     Then the user should be redirected to the "shop" page
@@ -16,7 +15,6 @@ Feature: Login Functionality
       | performance_glitch_user | secret_sauce |
       | error_user              | secret_sauce |
       | visual_user             | secret_sauce |
-
 
   Scenario Outline: Successful logout after login
     Given the user loges in with  "<username>" and "<password>"
@@ -31,7 +29,6 @@ Feature: Login Functionality
       | error_user              | secret_sauce |
       | visual_user             | secret_sauce |
 
-
   Scenario Outline: Login Navigation Security
     Given the user loges in with  "<username>" and "<password>"
     And the user clicks the browser's Back button
@@ -45,7 +42,6 @@ Feature: Login Functionality
       | performance_glitch_user | secret_sauce |
       | error_user              | secret_sauce |
       | visual_user             | secret_sauce |
-
 
   Scenario Outline: Failed login test <description>
     Given the user tries with "<username>" and "<password>"
