@@ -18,7 +18,7 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>false</useUnlimitedThreads>
-                    <threadCount>4</threadCount>
+                    <threadCount>6</threadCount>
 
                     <perCoreThreadCount>false</perCoreThreadCount>
                     <!--    <testFailureIgnore>true</testFailureIgnore> -->

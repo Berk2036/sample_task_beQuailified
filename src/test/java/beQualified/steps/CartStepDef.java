@@ -1,6 +1,7 @@
 package beQualified.steps;
 
 import beQualified.pages.*;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 import  static org.junit.Assert.*;
@@ -9,7 +10,7 @@ public class CartStepDef {
 
     CartPage cartPage = new CartPage();
 
-    @Then("the user clicks the remove button at cart page")
+    @And("the user clicks the remove button at cart page")
     public void the_user_clicks_the_remove_button_at_cart_page() {
         cartPage.allProductRemoveFromCart();
     }

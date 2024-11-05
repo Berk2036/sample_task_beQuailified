@@ -7,8 +7,8 @@ Feature: Cart page functionality
     When the user loges in with  "<username>" and "<password>"
     When  the user adds a product to the cart
     And the user navigates to the cart page
-    Then the user clicks the remove button at cart page
-    And the products should no longer visible in the cart
+    And the user clicks the remove button at cart page
+    Then the products should no longer visible in the cart
     Examples:
       | username                | password     |
       | standard_user           | secret_sauce |
