@@ -1,15 +1,12 @@
 package beQualified.steps;
 
 import beQualified.utilities.BrowserUtils;
-import beQualified.utilities.ConfigurationReader;
 import beQualified.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
-import java.time.Duration;
 
 public class Hooks {
 

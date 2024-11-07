@@ -1,9 +1,6 @@
 package beQualified.steps;
 
-import beQualified.pages.CartPage;
 import beQualified.pages.CheckoutPage;
-import beQualified.pages.LoginPage;
-import beQualified.pages.ShopPage;
 import beQualified.utilities.BrowserUtils;
 import beQualified.utilities.ConfigurationReader;
 import io.cucumber.java.en.Then;

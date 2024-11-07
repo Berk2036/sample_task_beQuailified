@@ -5,8 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.time.Duration;
-
 public class Driver {
 
     //create a private constructor to remove access to this object
@@ -52,9 +50,9 @@ public class Driver {
 
                     break;
                 case "chromeThirdParty":
-                    String pathForChromeDriver = "/src/test/resources/webdriver/chromedriver127.exe";
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + pathForChromeDriver);
-                    driverPool.set(new ChromeDriver());
+                  //  String pathForChromeDriver = "/src/test/resources/webdriver/chromedriver130.exe";
+                   // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + pathForChromeDriver);
+                    //  driverPool.set(new ChromeDriver());
                 default:
             }
 
