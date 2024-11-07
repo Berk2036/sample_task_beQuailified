@@ -3,7 +3,6 @@ package beQualified.steps;
 import beQualified.pages.*;
 import beQualified.utilities.BrowserUtils;
 import beQualified.utilities.ConfigurationReader;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
