@@ -3,7 +3,6 @@ Feature: Verification and shop process
   Background: User is on the shop page
     Given the user is on the "login" page
 
-
   Scenario Outline: User successfully completes the shopping
     When the user tries with "<username>" and "<password>"
     When the user adds a product to the cart
@@ -25,7 +24,6 @@ Feature: Verification and shop process
       | performance_glitch_user | secret_sauce |
       | error_user              | secret_sauce |
       | visual_user             | secret_sauce |
-
 
   Scenario Outline: Verify "Add to Cart" button functionality
     When the user tries with "<username>" and "<password>"
