@@ -99,11 +99,9 @@ public class ShopStepDef {
     public void the_number_in_the_cart_icon_should_match_the_number_of_products_in_cart() {
         String cartText = shopPage.CartIcon.getText();
         int cartValue = cartText.isEmpty() ? 0 : Integer.parseInt(cartText);
-
         int addCartBtnValue = shopPage.listOfAllRemoveBtn.size();
 
         assertEquals(cartValue, addCartBtnValue);
-
     }
 
     @When("the user has added first product to the cart")
@@ -120,13 +118,13 @@ public class ShopStepDef {
 
     @When("the user has added all product to the cart")
     public void the_user_has_added_all_product_to_the_cart() {
-        expectedProductListData = shopPage.getListAllProductInfoWithoutImage(shopPage.productList);
+        expectedProductListData = shopPage.getListProductInfoWithoutImage(shopPage.productList);
         shopPage.allProductAddToCart();
     }
 
     @When("the all product information in the cart should match the shop page details")
     public void the_all_product_information_in_the_cart_should_match_the_shop_page_details() {
-        actualProductListData = cartPage.getListAllProductInfo(cartPage.productList);
+        actualProductListData = cartPage.getListProductInfoWithoutImage(cartPage.productList);
         assertEquals(expectedProductListData, actualProductListData);
     }
 

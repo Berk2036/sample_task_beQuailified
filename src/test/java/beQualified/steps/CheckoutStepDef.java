@@ -13,7 +13,6 @@ public class CheckoutStepDef {
 
     CheckoutPage checkoutPage = new CheckoutPage();
 
-
     @Then("the user enters the required information")
     public void the_user_enters_the_required_information(Map<String, String> requiredInformation) {
         //type value in input
