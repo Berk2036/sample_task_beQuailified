@@ -7,50 +7,32 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProductPage extends BasePage{
 
+    //product name for product page
     @FindBy(css = ".inventory_details_name")
     public WebElement productName;
+
+    //product description for product page
     @FindBy(css = ".inventory_details_desc")
     public WebElement productDescription;
 
+    //product price for product page
     @FindBy(css = ".inventory_details_price")
     public WebElement productPrice;
 
+    //button back to shop page
     @FindBy(id = "back-to-products")
     public WebElement backToShopPageBtn;
 
+    //button add to cart for product page
     @FindBy(id = "add-to-cart")
     public WebElement addToCartBtn;
 
-
-    public String getAttributeSrc(WebElement product){
-
-        return product.getAttribute("src");
-
-    }
-
-    public String getProductPrice(WebElement product) {
-
-        return product.findElement(By.className("inventory_details_price")).getText();
-
-    }
-
-    public String getProductTitle(WebElement product) {
-
-        return product.findElement(By.xpath("//div[@class='inventory_details_name large_size']")).getText();
-
-    }
-
-    public String getProductDescription(WebElement product) {
-
-        return product.findElement(By.className("inventory_details_desc")).getText();
-
-    }
-
+    /**
+     * to redirect shop page
+     */
     public void backToShopPage(){
-
         BrowserUtils.waitForVisibility(backToShopPageBtn, 10);
         backToShopPageBtn.click();
-
     }
 
 

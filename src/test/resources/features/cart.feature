@@ -18,7 +18,6 @@ Feature: Cart page functionality
       | error_user              | secret_sauce |
       | visual_user             | secret_sauce |
 
-
   Scenario Outline:  User removes items from the cart using the Remove button
     When the user loges in with  "<username>" and "<password>"
     When the user clicks all Add to Cart

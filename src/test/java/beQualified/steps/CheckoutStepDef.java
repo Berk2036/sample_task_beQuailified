@@ -1,9 +1,6 @@
 package beQualified.steps;
 
-import beQualified.pages.CartPage;
 import beQualified.pages.CheckoutPage;
-import beQualified.pages.LoginPage;
-import beQualified.pages.ShopPage;
 import beQualified.utilities.BrowserUtils;
 import beQualified.utilities.ConfigurationReader;
 import io.cucumber.java.en.Then;
@@ -15,7 +12,6 @@ import static org.junit.Assert.*;
 public class CheckoutStepDef {
 
     CheckoutPage checkoutPage = new CheckoutPage();
-
 
     @Then("the user enters the required information")
     public void the_user_enters_the_required_information(Map<String, String> requiredInformation) {

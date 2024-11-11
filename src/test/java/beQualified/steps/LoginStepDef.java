@@ -4,7 +4,6 @@ import beQualified.pages.LoginPage;
 import beQualified.pages.ShopPage;
 import beQualified.utilities.BrowserUtils;
 import beQualified.utilities.ConfigurationReader;
-import beQualified.utilities.Driver;
 import beQualified.utilities.enums.ErrorMessages;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,7 +16,6 @@ public class LoginStepDef {
     LoginPage loginPage = new LoginPage();
     ShopPage shopPage = new ShopPage();
 
-
     @When("the user loges in with  {string} and {string}")
     public void theUserLogesInWithAnd(String username, String password) {
         loginPage.login(username, password);
@@ -27,7 +25,6 @@ public class LoginStepDef {
     public void theUserShouldBeRedirectedToThePage(String page) {
         BrowserUtils.verifyURLContains(ConfigurationReader.getProperty(page));
     }
-
 
     @Then("an error message {string} should be displayed")
     public void an_error_message_should_be_displayed(String errorMessage) {
@@ -71,7 +68,7 @@ public class LoginStepDef {
     @Given("the user is on the {string} page")
     public void theUserIsOnThePage(String page) {
         String url = ConfigurationReader.getProperty(page);
-        Driver.getDriver().get(url);
+        BrowserUtils.getUrl(url);
     }
 
 
