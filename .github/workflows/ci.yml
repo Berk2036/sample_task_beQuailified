@@ -17,8 +17,8 @@ jobs:
         with:
             distribution: 'temurin'
             java-version: '17'
-      - name: Install Maven
-        run: mvn install
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@3.9.9
       - name: Build with Maven
         run: mvn clean install
       - name: Run Cucumber Tests
