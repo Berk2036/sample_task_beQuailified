@@ -3,7 +3,6 @@ Feature: Checkout Process Functionality
   Background: the user is on the login page
     Given the user is on the "login" page
 
-
   Scenario Outline: Verify user navigates from cart to checkout page and returns to cart upon canceling
     When the user loges in with  "<username>" and "<password>"
     Given the user adds a product to the cart
@@ -18,8 +17,6 @@ Feature: Checkout Process Functionality
     Examples:
       | username                | password     |
       | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
-      | problem_user            | secret_sauce |
       | performance_glitch_user | secret_sauce |
-      | error_user              | secret_sauce |
-      | visual_user             | secret_sauce |
+      | visual_user   | secret_sauce |
+

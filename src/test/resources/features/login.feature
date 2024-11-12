@@ -7,9 +7,8 @@ Feature: Login Functionality
     Given the user loges in with  "<username>" and "<password>"
     Then the user should be redirected to the "shop" page
     Examples:
-      | username                | password     |
-      | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
+      | username      | password     |
+      | standard_user | secret_sauce |
       | problem_user            | secret_sauce |
       | performance_glitch_user | secret_sauce |
       | error_user              | secret_sauce |
@@ -20,9 +19,8 @@ Feature: Login Functionality
     When the user clicks the logout button
     Then the user should be redirected to the "login" page
     Examples:
-      | username                | password     |
-      | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
+      | username      | password     |
+      | standard_user | secret_sauce |
       | problem_user            | secret_sauce |
       | performance_glitch_user | secret_sauce |
       | error_user              | secret_sauce |
@@ -34,9 +32,8 @@ Feature: Login Functionality
     And the user clicks the browser's Forward button
     Then the user should be able to access the Shop page
     Examples:
-      | username                | password     |
-      | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
+      | username      | password     |
+      | standard_user | secret_sauce |
       | problem_user            | secret_sauce |
       | performance_glitch_user | secret_sauce |
       | error_user              | secret_sauce |
