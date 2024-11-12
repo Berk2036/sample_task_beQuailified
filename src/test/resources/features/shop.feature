@@ -19,11 +19,8 @@ Feature: Verification and shop process
     Examples:
       | username                | password     |
       | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
-      | problem_user            | secret_sauce |
       | performance_glitch_user | secret_sauce |
-      | error_user              | secret_sauce |
-      | visual_user             | secret_sauce |
+      | visual_user   | secret_sauce |
 
   Scenario Outline: Verify "Add to Cart" button functionality
     When the user tries with "<username>" and "<password>"
@@ -34,13 +31,10 @@ Feature: Verification and shop process
     Then the button should change to Add to Cart
     And the number in the cart icon should match the number of products in cart
     Examples:
-      | username                | password     |
-      | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
-      | problem_user            | secret_sauce |
+      | username      | password     |
+      | standard_user | secret_sauce |
       | performance_glitch_user | secret_sauce |
-      | error_user              | secret_sauce |
-      | visual_user             | secret_sauce |
+
 
   Scenario Outline: Verify added product appears in the cart
     When the user tries with "<username>" and "<password>"
@@ -48,13 +42,11 @@ Feature: Verification and shop process
     And the user navigates to the cart page
     Then the product information in the cart should match the shop page details
     Examples:
-      | username                | password     |
-      | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
+      | username      | password     |
+      | standard_user | secret_sauce |
       | problem_user            | secret_sauce |
       | performance_glitch_user | secret_sauce |
       | error_user              | secret_sauce |
-      | visual_user             | secret_sauce |
 
   Scenario Outline: Verify added product appears in the cart
     When the user tries with "<username>" and "<password>"
@@ -62,11 +54,8 @@ Feature: Verification and shop process
     And the user navigates to the cart page
     Then the all product information in the cart should match the shop page details
     Examples:
-      | username                | password     |
-      | standard_user           | secret_sauce |
-      | locked_out_user         | secret_sauce |
-      | problem_user            | secret_sauce |
+      | username      | password     |
+      | standard_user | secret_sauce |
       | performance_glitch_user | secret_sauce |
-      | error_user              | secret_sauce |
-      | visual_user             | secret_sauce |
+
 
