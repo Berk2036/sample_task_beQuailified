@@ -26,12 +26,12 @@ jobs:
        - name: Run Cucumber Tests
          run: mvn test -Dcucumber.options="--plugin json:target/cucumber-report.json --plugin html:target/cucumber-html-report.html"
        - name: Upload Cucumber JSON Report
-         uses: actions/upload-artifact@v3  # Update to v3
+         uses: actions/upload-artifact@v3  
          with:
           name: cucumber-json-report
           path: target/cucumber-report.json
        - name: Upload Cucumber HTML Report
-         uses: actions/upload-artifact@v3  # Update to v3
+         uses: actions/upload-artifact@v3  
          with:
           name: cucumber-html-report
           path: target/cucumber-html-report.html
