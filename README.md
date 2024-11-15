@@ -1,4 +1,4 @@
-﻿# sample_task_beQualified
+﻿# sauce_demo_selenium_cucumber
 ## Overview
 
 This project is a test automation framework designed to validate the functionality of the [SauceDemo](https://www.saucedemo.com/) website. It primarily focuses on testing the shopping functionality using Selenium WebDriver, Java, JUnit, and Cucumber.
