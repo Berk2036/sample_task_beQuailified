@@ -90,7 +90,7 @@ public class LoginSteps {
     │       └── 
     └── test/
     │   └── java/
-    │   │   └── beQualified/
+    │   │   └── sauce_demo/
     │   │       ├── pages/        # Page Object Models
     │   │       ├── runners       # Cukesrunner
     │   │       ├── steps/        # Step Definitions for Cucumber
@@ -125,7 +125,7 @@ public class LoginSteps {
 
 1. Create a new feature file in src/test/resources/features/.
 2. Define the scenarios in Gherkin syntax.
-3. Implement the corresponding step definitions in src/test/java/beQualified/steps/.
+3. Implement the corresponding step definitions in src/test/java/sauce_demo/steps/.
 
 ### Reporting
 
